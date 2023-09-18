@@ -21,13 +21,13 @@ All project grading will be done within this environment.
 In a docker installation,
 
 ```(bash)
-docker pull ghcr.io/cs-vtcompilers/project-env:latest
+docker pull ghcr.io/cs-vtcompilers/env-container:latest
 ```
 
 and run it with
 
 ```(bash)
-docker run -it ghcr.io/cs-vtcompilers/project-env:latest
+docker run -it ghcr.io/cs-vtcompilers/env-container:latest
 ```
 
 to get a command line running in the environment.
@@ -35,7 +35,7 @@ to get a command line running in the environment.
 A very typical set of flags would be giving the container a name, also using volumes to map your project folder from the container host into the container:
 
 ```(bash)
-docker run -it --name compiler_project -v /path/to/project/repo/folder:/home/user/repo ghcr.io/cs-vtcompilers/project-env
+docker run -it --name compiler_project -v /path/to/project/repo/folder:/home/user/repo ghcr.io/cs-vtcompilers/env-container
 ```
 
 And with a name, after exiting the container, it could be later re-started with:
